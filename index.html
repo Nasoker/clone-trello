@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Drag & Drop by Team Undefined</title>
+</head>
+
+<body>
+    <!-- Секция header -->
+    <header class="header">
+        <div class="conteiner conteiner-header">
+            <!-- Левая часть header -->
+            <div class="header-leftside">
+                <!-- Лого -->
+                <div class="header-leftside__logo">
+                    <img class="header-leftside__logo" src="./img/logo.jpg" alt="error__logo">
+                </div>
+                <div class="header-leftside__search">
+                    <!-- Строка поиска -->
+                    <input class="header-leftside__search-input" type="text" placeholder="Search the word">
+                    <!-- Кнопка поиска -->
+                    <button class="header-leftside__search-button" type="submit" name="Search">
+                        Search
+                        <i class="fas fa-search header-leftside__search-button-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Правая часть -->
+            <div class="header-rightside">
+                <!-- Имя -->
+                <div class="header-rightside__user-name">
+                </div>
+                <!-- Аватарка -->
+                <div class="header-rightside__user-img">
+                    <img class="header-rightside__user-img-avatar" src="./img/avatar.jpg" alt="error">
+                </div>
+                <!-- Кнопка настройки -->
+                <button class="header-rightside__settings-button">
+                    <i class="fas fa-cogs header-rightside__settings-button-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секция main -->
+    <main class="main">
+        <div class="conteiner conteiner-main">
+            <!-- Ряд с тасками -->
+            <div class="tasks-row">
+                <!-- Колонка с тасками -->
+                <div class="task-colum column1">
+                    <!-- Заголовок колонки -->
+                    <h2 class="task-colum__title task-colum__title-first">To Do 
+                        <span class="task-colum__counter">0/6 tasks 
+                        </span>
+                        <button class="colum-tasks-delete">
+                            <i class="far fa-times-circle task-list__item-buttons-delete-icon"></i>
+                        </button>
+                    </h2>
+                    <!-- Список тасок -->
+                    <ul class="task-list">
+                    </ul>
+                    <!-- Добавление таски -->
+                    <div class="task-add">
+                        <span>Add New Task</span>
+                        <button class="task-add__item-buttons-add">
+                            <i class="fas fa-plus task-add__item-buttons-add-icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="task-colum column2">
+                    <!-- Заголовок колонки -->
+                    <h2 class="task-colum__title task-colum__title-second">In progress 
+                        <span class="task-colum__counter">0/6 tasks </span>
+                        <button class="colum-tasks-delete">
+                            <i class="far fa-times-circle task-list__item-buttons-delete-icon"></i>
+                        </button>
+                    </h2>
+                    <!-- Список тасок -->
+                    <ul class="task-list">
+                    </ul>
+                </div>
+                <div class="task-colum column3">
+                    <!-- Заголовок колонки -->
+                    <h2 class="task-colum__title task-colum__title-third">Done 
+                        <span class="task-colum__counter">0/6 tasks</span>
+                        <button class="colum-tasks-delete">
+                            <i class="far fa-times-circle task-list__item-buttons-delete-icon"></i>
+                        </button>
+                    </h2>
+                    <!-- Список тасок -->
+                    <ul class="task-list">
+                        <!-- Таска для примера -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Ряд с выбором фона -->
+            <div class="background-row">
+                <ul class="background-row__list">
+                    <li class="background-row__list-item">
+                        <button class="background-row__list-item-button">
+                            <img class="background-row__list-item-button-img" src="./img/bike.jpg" alt="error-background-img">
+                        </button>
+                    </li>
+                    <li class="background-row__list-item">
+                        <button class="background-row__list-item-button">
+                            <img class="background-row__list-item-button-img" src="./img/cat.jpg" alt="error-background-img">
+                        </button>
+                    </li>
+                    <li class="background-row__list-item">
+                        <button class="background-row__list-item-button">
+                            <img class="background-row__list-item-button-img" src="./img/city.jpg" alt="error-background-img">
+                        </button>
+                    </li>
+                    <li class="background-row__list-item">
+                        <button class="background-row__list-item-button">
+                            <img class="background-row__list-item-button-img" src="./img/mountain.jpg" alt="error-background-img">
+                        </button>
+                    </li>
+                   <!--  <li class="background-row__list-item">
+                        <label class="background-row__list-item-label">
+                            <i class="fas fa-plus background-row__list-item-icon"></i>
+                            <input class="background-row__list-item-input" type="file" name="file">
+                        </label>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Секция footer -->
+    <footer class="footer">
+        <div class="conteiner conteiner-footer">
+            <div class="footer-description">
+                <p>
+                    © 2021 <span class="footer-description__active"> Undefined Team </span> with <i class="fas fa-heart footer-description__icon"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно login -->
+    <section class="modal-window-login hidden">
+        <div class="overlay"></div>
+        <div class="login-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Login Form</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <p class="modal-window__content-description">Please enter your UserName and choose a sound option.</p>
+                <label class="modal-window__content-lable" for="userName">User name</label>
+                <input class="modal-window__content-input" type="text" name="userName" placeholder="Enter the user name">
+                <div class="modal-window__sound-row">
+                    <label class="modal-window__sound-row-lable" for="sound">Sound option:</label>
+                    <div class="modal-window__sound-row-buttons">
+                        <div class="modal-window__sound-row-buttons-item">
+                            <input class="modal-window__sound-row-button-radio soundOff" type="radio" name="sound" name="soundOff" checked>
+                            <label class="modal-window__sound-row-button-lable" for="soundOff">
+                                <i class="fas fa-volume-mute modal-window__sound-row-button-lable-icon"></i>
+                            </label>
+                        </div>
+                        <div class="modal-window__sound-row-buttons-item">
+                            <input class="modal-window__sound-row-button-radio soundOn" type="radio" name="sound" name="soundOn">
+                            <label class="modal-window__sound-row-button-lable" for="soundOn">
+                                <i class="fas fa-volume-up modal-window__sound-row-button-lable-icon"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-cancel">
+                        <i class="far fa-times-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-cancel">
+                        </i>Cancel
+                    </button>
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Модальное окно confirm -->
+    <section class="modal-window-confirm hidden">
+        <div class="overlay"></div>
+        <div class="confirm-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Are you sure you want to do that ?</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <p class="modal-window__content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo molestias necessitatibus ex asperiores aspernatur doloremque repellat et eveniet fuga, a enim non id saepe repudiandae, quod totam iste dolores laborum?</p>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-cancel">
+                        <i class="far fa-times-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-cancel">
+                        </i>Cancel
+                    </button>
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Модальное окно tasks -->
+    <section class="modal-window-tasks hidden">
+        <div class="overlay"></div>
+        <div class="tasks-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Add Task Form</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <p class="modal-window__content-description">Please enter a task title, description.</p>
+                <label class="modal-window__content-lable" for="taskTitle">Task title</label>
+                <input class="modal-window__content-input" type="text" name="taskTitle" placeholder="New task name" required>
+                <label class="modal-window__content-lable" for="taskDescription">Description</label>
+                <input class="modal-window__content-input-description" type="text" name="taskDescription" placeholder="Description" required>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-cancel">
+                        <i class="far fa-times-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-cancel">
+                        </i>Cancel
+                    </button>
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Модальное окно Edit -->
+    <section class="modal-window-edit hidden">
+        <div class="overlay"></div>
+        <div class="edit-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Edit Task Form</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <p class="modal-window__content-description">Now you can edit a task title, description.</p>
+                <label class="modal-window__content-lable" for="taskTitle">Task title</label>
+                <input class="modal-window__content-input" type="text" name="taskTitle" placeholder="New task name" required>
+                <label class="modal-window__content-lable" for="taskDescription">Description</label>
+                <input class="modal-window__content-input-description" type="text" name="taskDescription" placeholder="Description" required>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-cancel">
+                        <i class="far fa-times-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-cancel">
+                        </i>Cancel
+                    </button>
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Модальное окно alert -->
+    <section class="modal-window-alert hidden">
+        <div class="overlay"></div>
+        <div class="confirm-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Alert!</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <p class="modal-window__content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo molestias necessitatibus ex asperiores aspernatur doloremque repellat et eveniet fuga, a enim non id saepe repudiandae, quod totam iste dolores laborum?</p>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Модальное окно Settings -->
+     <section class="modal-window-settings hidden">
+        <div class="overlay"></div>
+        <div class="login-form conteiner conteiner__modal-window">
+            <div class="modal-window__header">
+                <h2 class="modal-window__header-title">Settings Form</h2>
+                <button class="modal-window__header-button">
+                    <i class="far fa-times-circle modal-window__header-button-icon"></i>
+                </button>
+            </div>
+            <div class="modal-window__content">
+                <label class="modal-window__content-lable" for="userName">Change Nick name?</label>
+                <input class="modal-window__content-input" type="text" name="userName" placeholder="Enter the user name">
+                <div class="modal-window__sound-row">
+                    <label class="modal-window__sound-row-lable" for="sound">Sound option:</label>
+                    <div class="modal-window__sound-row-buttons">
+                        <div class="modal-window__sound-row-buttons-item">
+                            <input class="modal-window__sound-row-button-radio soundOff" type="radio" name="sound" name="soundOff" checked>
+                            <label class="modal-window__sound-row-button-lable" for="soundOff">
+                                <i class="fas fa-volume-mute modal-window__sound-row-button-lable-icon"></i>
+                            </label>
+                        </div>
+                        <div class="modal-window__sound-row-buttons-item">
+                            <input class="modal-window__sound-row-button-radio soundOn" type="radio" name="sound" name="soundOn">
+                            <label class="modal-window__sound-row-button-lable" for="soundOn">
+                                <i class="fas fa-volume-up modal-window__sound-row-button-lable-icon"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-window__change__volume">
+                    <label class="modal-window__sound-row-lable" for="sound">Change volume:</label>
+                    <input class='modal-window__change__volume-input' type="range" min="0" max="100" value="0">
+                </div>
+                <div class="modal-window__buttons-row">
+                    <button class="modal-window__buttons-row-item modal-window__button-cancel">
+                        <i class="far fa-times-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-cancel">
+                        </i>Cancel
+                    </button>
+                    <button class="modal-window__buttons-row-item modal-window__button-confirm">
+                        <i class="far fa-check-circle modal-window__buttons-row-item-icon modal-window__buttons-row-item-icon-confirm"></i>Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Подключение js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
